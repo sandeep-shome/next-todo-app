@@ -9,7 +9,7 @@ const TodoItem = ({ text, id, isDone, getData }) => {
 
   const removeData = () => {
     axios
-      .delete("http://localhost:3000/api/delete", {
+      .delete("https://next-todo-app-alpha.vercel.app/api/delete", {
         params: {
           id: id,
         },
@@ -32,7 +32,7 @@ const TodoItem = ({ text, id, isDone, getData }) => {
   const updateData = () => {
     axios
       .put(
-        "http://localhost:3000/api/update",
+        "https://next-todo-app-alpha.vercel.app/api/update",
         {
           isDone: !isDone,
         },
