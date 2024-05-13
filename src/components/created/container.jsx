@@ -17,7 +17,7 @@ const Container = () => {
   const getData = () => {
     setIsLoading(true);
     axios
-      .get("http://localhost:3000/api/gettodos")
+      .get("https://next-todo-app-alpha.vercel.app/api/gettodos")
       .then((res) => {
         setData(res.data);
         setIsLoading(false);
@@ -33,7 +33,7 @@ const Container = () => {
 
   const addData = () => {
     axios
-      .post("http://localhost:3000/api/create", {
+      .post("https://next-todo-app-alpha.vercel.app/api/create", {
         text: taskInput,
         isDone: false,
       })
